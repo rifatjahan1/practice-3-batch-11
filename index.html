@@ -8,13 +8,28 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/6c97c1d8e6.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             clifford: '#da373d',
-          }
+            customGreen: "rgb(23, 152, 0)",
+            customBlack: "rgb(17, 17, 17)",
+
+
+          },
+          fontFamily: {
+
+            textPrimary: ["Fira Sans", "serif"], // Heading Font
+          },
+
         }
       }
     }
@@ -23,67 +38,93 @@
   <title>Practice-3-b-11</title>
 </head>
 
-<body>
-  <div class="navbar bg-base-100 ">
-    <div class="navbar-start">
-      <a class="btn btn-ghost text-xl">daisyUI</a>
-    </div>
-    <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal px-1">
-        <li><a href="">Products</a></li>
-        <li>
-          <a href="">Services</a>
-        </li>
-        <li><a href="">Contact Us</a></li>
-      </ul>
-    </div>
+<body class="max-w-7xl mx-auto">
+  <header>
+    <div class="navbar bg-base-100 flex justify-between items-center">
+      <div class="navbar-start">
+        <a class="btn btn-ghost text-xl flex items-center justify-center w-36 h-14">
+          <img src="c2-assets/logo-header.png" alt="">
 
-    <div class="navbar-end">
-      <div class="dropdown dropdown-end">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle lg:hidden">
-          <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h8m-8 6h16" />
-        </svg>
-        </div>
-        <ul
-          tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        </a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 text-lg">
+          <li><a href="">Products</a></li>
           <li>
-           <a href="">Products</a>
+            <a href="">Services</a>
           </li>
-          <li><a>Services</a></li>
-          <li><a>Contact Us</a></li>
+          <li><a href="">Contact Us</a></li>
+
         </ul>
       </div>
-      <button class="btn btn-ghost btn-circle hidden lg:flex">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-      </button>
-      <button class="hidden lg:flex me-2" >hello</button>
-      <button class="hidden lg:flex" >register</button>
 
+      <div class="navbar-end">
+
+
+        <button class="btn btn-ghost btn-circle  hidden  lg:flex">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+        <button class="hidden lg:flex"> <i class="fa-solid fa-cart-shopping me-8"></i></button>
+        <button
+          class=" border border-customGreen text-black p-2 rounded w-28 h-10  hidden lg:inline me-4">Login</button>
+
+        <button class="bg-customGreen text-white p-2 rounded w-28 h-10  hidden lg:inline me-4">Register</button>
+        <div class="dropdown dropdown-end ms-12">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-green-500 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            <li>
+              <a href="">Products</a>
+            </li>
+            <li><a>Services</a></li>
+            <li><a>Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
     </div>
     </div>
-  </div>
+
+    <!--navbar end-->
+    <!--banner section stated-->
+    <section>
+      <div class="hero min-h-screen">
+        <div class="hero-content text-center ">
+          <div class="">
+            <h1 class="text-2xl lg:text-5xl font-semibold text-customBlack">Freshness <span class="text-customGreen">You
+                Can<br>
+                Count</span> On, Prices You will Love!</h1>
+            <p class="py-4 lg:py-9 text-sm lg:text-xl">
+              Shop your daily essentials at unbeatable prices.
+              From fresh produce to pantry,<br>
+              staples, we have got you covered every day!
+            </p>
+            <img src="c2-assets/hero-vegetables.png" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </header>
+  <main>
+
+  </main>
+
+
+
+
+
+
+
+
 </body>
 
 </html>
